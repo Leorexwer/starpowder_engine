@@ -1,0 +1,22 @@
+	<h1 class="post__name">Drug Addiction</h1>
+	<p class="post__content">Everyone around thinks that it's bad to do drugs, but noone thought about why people actually take them. Let's take a deep breath and try to understand, why this wold's taking us painfully</p>
+	<p class="post__date">22.08.2035</p>
+	<div class="separator"></div>
+
+}
+	<h1 class="post__name">Drug Addiction</h1>
+	<p class="post__content">Everyone around thinks that it's bad to do drugs, but noone thought about why people actually take them. Let's take a deep breath and try to understand, why this wold's taking us painfully</p>
+	<p class="post__date">22.08.2035</p>
+	<div class="separator"></div>
+	</div>
+}
+	<h1 class="post__name">Drug Addiction</h1>
+	<p class="post__content">Everyone around thinks that it's bad to do drugs, but noone thought about why people actually take them. Let's take a deep breath and try to understand, why this wold's taking us painfully</p>
+	<p class="post__date">22.08.2035</p>
+	<div class="separator"></div>
+	</div>
+}
+	<h1 class="post__name">Drug Addiction</h1>
+	<p class="post__content">Everyone around thinks that it's bad to do drugs, but noone thought about why people actually take them. Let's take a deep breath and try to understand, why this wold's taking us painfully</p>
+	<p class="post__date">22.08.2035</p>
+	<div class="separator"></div>
