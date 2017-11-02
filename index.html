@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Caveat|Shrikhand|Indie+Flower|Fjalla+One|Dosis" rel="stylesheet">
+	<style type="text/css">
+		@keyframes aa{
+			from{
+				color: white;
+			}
+			to{
+				color: cyan;
+			}
+		}
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.head{
+			background-size: cover;
+			background-repeat: repeat-x;
+			background-position: fixed;
+			background-image: url('back.jpg'); 
+			font-family: Shrikhand, coursive;
+			font-size: 2vmin;
+			text-align: center;
+			padding-top: 100px;
+			color: white;
+			height: 300px;
+			width: auto;
+		}
+		#sbe{
+			font-family: 'Indie Flower';
+		}
+		nav{
+			background-image: none;
+			text-align: center;
+			font-family: Indie Flower;
+			font-size: 2vmin;
+			height: auto;
+			background-color: rgb(104, 104, 104);
+			color: white;
+		}
+		ul {
+		    list-style-type: none
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		a:hover{
+			animation: aa 1s linear;
+			cursor: pointer;
+		}
+		li{
+			text-align: center;
+			display: inline;
+			margin-right: 50px;
+			margin-left: 50px;
+
+		}
+		.posts{
+			padding: 15px;
+			margin-top: 25px;
+			margin-left: 6vmin;
+			margin-right: 6vmin;
+			text-align: center;
+
+		}
+		.post__name{
+			font-family: Indie Flower;
+			font-size: 5vmin;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.post__content{
+			padding-left: 10px;
+			margin-top: 25px;
+			font-family: Dosis;
+			font-size: 2vmin;
+			text-align: left;
+			border-left: solid grey 0.5px;
+		}
+		.post__date{
+			margin-top: 25px;
+		}
+		.separator{
+			margin-top: 10px;
+			height: .5px;
+			margin-right: 20%;
+			margin-left: 20%;
+			background-color: grey;
+		}
+	</style>
+	<script type="text/javascript">
+		function loadcontent(){
+			var posts = document.querySelector('.posts')
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'posts.txt', false);
+			xhr.send();
+			if(xhr.status != 200){
+				alert('[X]: ' + xhr.status + xhr.statusTe)
+			}else{
+				var cont = xhr.responseText
+				var ready = new Array()
+				ready = cont.split('}')
+				for(var i = 0; i < ready.lenght; ++i){
+					var newpost = document.createElement('div')
+					newpost.class = 'post'
+					newpost.id = `${i}`
+					document.querySelector('.posts').append(newpost)
+					newpost.innerHTML = `${ready}`
+				}
+			}
+		}
+		function loadbio(){
+			var posts = document.querySelector('.posts')
+			posts.innerHTML = `
+					<div class="post__name">My short bio</div>
+					<div class="post__content">My name is Leonid Brown. I'm just a simple boy from Siberia, but I have some strong thoughts about our existence, about how this all works and floats daily into the void, or maybe...somewhere else.</div>
+			`
+		}
+	</script>
+</head>
+<body>
+	<div class="head">
+		<h1>Leonid Brown</h1>
+		<h3 id="sbe" style="text-decoration: underline;">A Personal blog of a nerd...</h3>
+	</div>
+	<div class="navigator">
+		<nav class="nav">
+			<ul>
+			  <li><a onclick="loadcontent() ">Main</a></li>
+			  <li><a onclick="loadbio() ">Bio</a></li>
+			  <li><a onclick="loadweb() ">Personal Website</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="posts">
+		<div class="post">
+			<h1 class="post__name">Drug Addiction</h1>
+			<p class="post__content">Everyone around thinks that it's bad to do drugs, but noone thought about why people actually take them. Let's take a deep breath and try to understand, why this wold's taking us painfully</p>
+			<p class="post__date">22.08.2035</p>
+			<div class="separator"></div>
+		</div>
+	</div>
+</body>
+</html>
